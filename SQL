@@ -1,0 +1,4 @@
+SELECT b.name AS reviewer_name, a.title AS book_title, c.rating, c.rating_date 
+FROM books AS a, reviewers AS b, ratings AS c 
+WHERE a.id = c.book_id and b.id = c.reviewer_id
+ORDER BY 1, 2, 3;
